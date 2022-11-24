@@ -23,13 +23,11 @@ interface ListProps {
 
 export function Home(){
     const [movieList, setMovieList] = useState<ListProps[]>([]);
-    console.log('list: ', movieList);
 
     useEffect(() => {
         const loadAll = async () => {
             const list = await api.getHomeList();
             setMovieList(list);
-            console.log(list)
         }
 
         loadAll();
