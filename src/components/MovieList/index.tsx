@@ -8,7 +8,7 @@ interface MovieListProps {
 
 interface SectionMoviesProps {
     title: string;
-    items: MovieListProps[];
+    items: any;
 }
 
 export function MovieList({ title, items }: SectionMoviesProps) {
@@ -17,8 +17,8 @@ export function MovieList({ title, items }: SectionMoviesProps) {
             <h2>{title}</h2>
             <div className={styles.wrapper}>
                 <div className={styles.containerMovieList}>
-                    {items.length &&
-                        items.map((item, key) => {
+                    {items.results.length &&
+                        items.results.map((item, key) => {
                             return (
                                 <div key={key} className={styles.movieItem}>
                                     <img
