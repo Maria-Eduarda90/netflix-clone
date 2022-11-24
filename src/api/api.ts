@@ -1,7 +1,6 @@
 import { MovieProps } from './../pages/home/index';
-
 export const API_KEY = import.meta.env.VITE_KEY;
-export const API_BASE_URL = import.meta.env.BASE_URL;
+export const API_BASE_URL = import.meta.env.VITE.BASE_URL;
 
 const basicFecth = async (endpoint: string) => {
   const req = await fetch(`${API_BASE_URL}${endpoint}`);
