@@ -1,6 +1,6 @@
 import { MovieProps } from './../pages/home/index';
 
-export const API_KEY = import.meta.env.VITE_API_KEY;
+export const API_KEY = import.meta.env.VITE_SOME_KEY;
 export const API_BASE_URL = "https://api.themoviedb.org/3";
 
 const basicFecth = async (endpoint: string) => {
