@@ -4,15 +4,22 @@ import { MovieList } from '../../components/MovieList';
 
 import styles from './styles.module.scss';
 
-type ListProps = {
-    id: number,
-    slug: string;
+export interface MovieProps {
+    id: number;
+    overview: string;
+    poster_path: string;
+    original_title: string;
+}
+
+interface ListProps {
     title: string;
-    items: any;
+    slug: string;
+    items: MovieProps[];
 }
 
 export function Home(){
     const [movieList, setMovieList] = useState<ListProps[]>([]);
+    console.log('list: ', movieList);
 
     useEffect(() => {
         const loadAll = async () => {

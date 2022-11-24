@@ -1,12 +1,13 @@
+import { MovieProps } from "../pages/home";
+
 export const API_KEY = import.meta.env.VITE_API_KEY;
-console.log(API_KEY)
 export const API_BASE_URL = "https://api.themoviedb.org/3";
 
-const basicFecth = async (endpoint: string) => {
+const basicFecth = async (endpoint: string): Promise<MovieProps[]> => {
   const req = await fetch(`${API_BASE_URL}${endpoint}`);
   const json = await req.json();
   return json;
-}
+};
 
 export default {
     getHomeList: async () => {
