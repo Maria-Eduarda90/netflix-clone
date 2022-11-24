@@ -21,7 +21,7 @@ export function MovieList({ title, items }: SectionMoviesProps) {
             <h2>{title}</h2>
             <div className={styles.wrapper}>
                 <div className={styles.containerMovieList}>
-                    {items.results.length &&
+                    {items.results &&
                         items.results.map((item, key) => {
                             return (
                                 <div key={key} className={styles.movieItem}>
