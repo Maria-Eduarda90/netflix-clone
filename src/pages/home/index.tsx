@@ -11,10 +11,14 @@ export interface MovieProps {
     original_title: string;
 }
 
+interface Test {
+    results: MovieProps[]
+}
+
 interface ListProps {
     title: string;
     slug: string;
-    items: MovieProps[];
+    items: Test;
 }
 
 export function Home(){

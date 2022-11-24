@@ -6,9 +6,13 @@ interface MovieListProps {
     original_title: string;
 }
 
+interface Test {
+    results: MovieListProps[]
+}
+
 interface SectionMoviesProps {
     title: string;
-    items: any;
+    items: Test;
 }
 
 export function MovieList({ title, items }: SectionMoviesProps) {
