@@ -1,0 +1,89 @@
+.featured {
+    height: 100vh;
+
+    .featuredVertical {
+        width: inherit;
+        height: inherit;
+        
+
+        .featuredHorizontal {
+            width: inherit;
+            height: inherit;
+            background: linear-gradient(to right, rgba(33, 33, 33, 0.484) 30%, rgba(33, 33, 33, 0.484) 70%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 3.3rem;
+            // padding-bottom: 60px;
+            // padding-top: 70px;
+
+            .featuredName {
+                font-size: 3.75rem;
+                font-weight: bold;
+            }
+
+            .featuredInfo {
+                font-size: 1.125rem;
+                margin-top: 0.937rem;
+                display: flex;
+                align-items: center;
+                gap: 0.937rem;
+
+                .featuredPoints {
+                    color: #45d369;
+                }  
+            }
+
+            .featuredDescription {
+                margin-top: 0.937rem;
+                
+                max-width: 38%;
+            }
+
+            .featuredButtons {
+                margin-top: 0.937rem;
+                display: flex;
+                align-items: center;
+                gap: 0.937rem;
+
+                .featuredWatchButton, .featuredInfoButton {
+                    border-radius: 4px;
+                    text-decoration: none;
+                    display: flex;
+                    align-items: center;
+                    transition: all ease 0.2s;
+                }
+
+                .featuredWatchButton {
+                    background: #fff;
+                    color: #000;
+                    font-weight: bold;
+                    gap: 0.4rem;
+                    padding: 0.4rem 1.5rem 0.4rem 1rem;
+                    opacity: 1;
+
+                    &:hover {
+                        opacity: 0.7;
+                    }
+                }
+
+                .featuredInfoButton {
+                    color: #FFF;
+                    background-color: rgba(109, 109, 110, 0.7);
+                    font-weight: bold;
+                    gap: 0.6rem;
+                    padding: 0.4rem 1.5rem;
+
+                    &:hover {
+                        background: rgba(102, 97, 97, 0.479);
+                    }
+                }
+            }
+
+            .featuredGenres {
+                margin-top: 0.937rem;
+                
+            }
+        }
+    }
+}
