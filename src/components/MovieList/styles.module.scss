@@ -2,12 +2,13 @@
     margin-bottom: 1.875rem;
 
     h2 {
-        margin-left: 1.875rem;
+        margin-left: 3.5rem;
+        font-size: 18px;
     }
 
     .wrapper {
         overflow-x: hidden;
-        padding-left: 1.875rem;
+        padding-left: 3rem;
 
         .containerMovieList {
             width: 99999999px;
@@ -21,6 +22,7 @@
                     width: 100%;
                     transform: scale(0.9);
                     transition: all ease 0.2s;
+                    border-radius: 4px;
 
                     &:hover {
                         transform: scale(1)
