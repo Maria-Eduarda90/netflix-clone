@@ -3,7 +3,6 @@ import api from '../../api/api';
 import { FeatureMovie } from '../../components/FeaturedMovie';
 import { Header } from '../../components/Header';
 import { MovieList } from '../../components/MovieList';
-import avatar2 from '../../img/avatar2.png';
 
 import styles from './styles.module.scss';
 
@@ -80,7 +79,13 @@ export function Home(){
                 })}
             </section>
 
-            
+            {movieList.length <= 0 && 
+                <div className={styles.loading}>
+                    <div className={styles.loader}>
+
+                    </div>
+                </div>
+            }
         </div>
     );
 }

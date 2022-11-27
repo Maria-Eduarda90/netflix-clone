@@ -2,4 +2,35 @@
     .lists {
         margin-top: -40px;
     }
+
+    .loading {
+        position: fixed;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 999;
+        background-color: #000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .loader {
+            animation: is-rotating 1s infinite;
+            border: 6px solid #000000;
+            border-radius: 50%;
+            border-top-color: #ca0808;
+            height: 5rem;
+            width: 5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            @keyframes is-rotating {
+                to {
+                    transform: rotate(1turn);
+                }
+            }
+        }
+    }
 }
