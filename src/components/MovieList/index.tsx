@@ -20,7 +20,7 @@ interface SectionMoviesProps {
 }
 
 export function MovieList({ title, items }: SectionMoviesProps) {
-    const [scrollX, setScrollX] = useState(-400);
+    const [scrollX, setScrollX] = useState(0);
     
     function handleLeftArrow() {
         let x = scrollX + Math.round(window.innerWidth / 2);
