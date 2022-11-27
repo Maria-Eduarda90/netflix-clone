@@ -51,8 +51,8 @@ export function FeatureMovie({ items }: MovieProps){
                     </div>
                     <div className={styles.featuredDescription}>{items.overview}</div>
                     <div className={styles.featuredButtons}>
-                        <a href="" className={styles.featuredWatchButton}><ImPlay3 size={'30px'}/> Assistir</a>
-                        <a href="" className={styles.featuredInfoButton}><MdInfoOutline size={'30px'}/> Mais informações</a>
+                        <a href="/home" className={styles.featuredWatchButton}><ImPlay3 size={'30px'}/> Assistir</a>
+                        <a href="/home" className={styles.featuredInfoButton}><MdInfoOutline size={'30px'}/> Mais informações</a>
                     </div>
                     <div className={styles.featuredGenres}>
                             <strong>Gêneros: </strong>{genres.join(', ')}.
