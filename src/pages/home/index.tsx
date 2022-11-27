@@ -1,7 +1,9 @@
 import { useEffect, useState } from 'react';
 import api from '../../api/api';
 import { FeatureMovie } from '../../components/FeaturedMovie';
+import { Header } from '../../components/Header';
 import { MovieList } from '../../components/MovieList';
+import avatar2 from '../../img/avatar2.png';
 
 import styles from './styles.module.scss';
 
@@ -25,6 +27,7 @@ interface ListProps {
 export function Home(){
     const [movieList, setMovieList] = useState<ListProps[]>([]);
     const [featuredData, setFeaturedData] = useState<any>();
+    const [blackHeader, setBlackHeader] = useState(false);
 
     useEffect(() => {
         const loadAll = async () => {
@@ -42,8 +45,24 @@ export function Home(){
         loadAll();
     }, []);
 
+    useEffect(() => {
+        const scrollListener = () => {
+            if(window.scrollY > 10){
+                setBlackHeader(true);
+            } else {
+                setBlackHeader(false);
+            }
+        }
+
+        window.addEventListener('scroll', scrollListener);
+        return () => {
+            window.removeEventListener('scroll', scrollListener);
+        }
+    })
+
     return(
         <div className={styles.home}>
+            <Header black={blackHeader}/>
 
             {featuredData && 
                 <FeatureMovie items={featuredData}/>
@@ -60,6 +79,8 @@ export function Home(){
                     );
                 })}
             </section>
+
+            
         </div>
     );
 }
