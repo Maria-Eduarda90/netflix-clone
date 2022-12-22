@@ -13,6 +13,7 @@
 - Sass
 - Axios
 - Typescript
+- React Router
 
 ### Como rodar o projeto ?
 
