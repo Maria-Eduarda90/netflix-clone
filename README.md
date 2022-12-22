@@ -27,7 +27,7 @@ $ cd netflix-clone
 $ npm i or yarn install
 
 # Execute a aplicação em modo de desenvolvimento
-$ ```npm run dev``` or ```yarn dev```
+$ npm run dev or yarn dev
 
 ```
 
